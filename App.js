@@ -59,8 +59,10 @@ const RestroCard = (props) => {
         name, 
         cuisines,
         avgRating,
-        slaString
-    } = restroData?.info;
+      } = restroData?.info;
+    
+      const { slaString } = restroData?.info?.sla;
+
 
     return (
         <div className="restro-card">
@@ -508,7 +510,9 @@ const Body = () => {
 
             <div className="restro-Container">
 
-                {restList.map(restaurant => <RestroCard restroData={restaurant}/>)};
+                {restList.map((restaurant) => (
+                  < RestroCard restroData={restaurant} />
+                ))};
 
             </div>
         </div>
