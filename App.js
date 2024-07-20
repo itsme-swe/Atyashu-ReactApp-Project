@@ -511,7 +511,7 @@ const Body = () => {
             <div className="restro-Container">
 
                 {restList.map((restaurant) => (
-                  < RestroCard restroData={restaurant} />
+                  < RestroCard key={restaurant.info.id} restroData={restaurant} />
                 ))};
 
             </div>
